@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-
-import { FormControl } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
+import { numberValidator } from 'src/share/number.directive';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,10 @@ import { FormControl } from '@angular/forms';
 export class AppComponent {
   options = ['isPrime', 'isFibonacci']
   choice = new FormControl(this.options[0])
-  userInput = new FormControl('')
+  userInput = new FormControl('', [
+    Validators.required,
+    numberValidator(),
+  ])
 
 
   get inputValue() {

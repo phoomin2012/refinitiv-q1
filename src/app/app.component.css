@@ -1,0 +1,24 @@
+
+  .content {
+    width: 100%;
+    min-width: 600px;
+    display: flex;
+  }
+
+  .content .left-panel {
+    width: 200px;
+    min-width: 200px;
+    border: 1px #000 solid;
+  }
+
+  .content .middle-panel {
+    flex-grow: 1;
+    min-width: 100px;
+    border: 1px #000 solid;
+  }
+
+  .content .right-panel {
+    width: 300px;
+    min-width: 300px;
+    border: 1px #000 solid;
+  }
